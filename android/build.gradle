@@ -28,6 +28,6 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
-    implementation 'com.tom_roush:pdfbox-android:2.0.27.0'
+    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
     implementation 'com.facebook.react:react-native:+' // provided by host app at runtime
 }
