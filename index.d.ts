@@ -1,6 +1,6 @@
-export default interface PdfTextExtractorModule {
+export interface PdfTextExtractorModule {
   extractTextFromPdf(filePath: string): Promise<string>;
 }
 
 declare const _default: PdfTextExtractorModule;
-export = _default;
+export default _default;

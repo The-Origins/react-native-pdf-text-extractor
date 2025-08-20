@@ -20,10 +20,14 @@ android {
     namespace 'com.pdftextextractor'
 }
 
+repositories {
+    google()
+    mavenCentral()
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
-    implementation 'org.apache.pdfbox:pdfbox-android:2.0.27.0'
+    implementation 'com.tom_roush:pdfbox-android:2.0.27.0'
     implementation 'com.facebook.react:react-native:+' // provided by host app at runtime
 }
