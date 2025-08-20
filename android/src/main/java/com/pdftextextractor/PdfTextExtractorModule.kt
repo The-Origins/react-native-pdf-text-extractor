@@ -9,6 +9,7 @@ import com.facebook.react.bridge.Promise
 
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
 
 
 import java.io.File
@@ -26,6 +27,9 @@ class PdfTextExtractorModule(private val reactContext: ReactApplicationContext) 
     @ReactMethod
     fun extractText(filePath: String, promise: Promise) {
         try {
+            //Init PDF Box resources
+            PDFBoxResourceLoader.init(reactContext)
+
             val file = File(filePath)
             if (!file.exists()) {
                 promise.reject("ENOENT", "File not found: $filePath")

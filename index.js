@@ -14,5 +14,5 @@ export default {
    * @param {string} filePath absolute path to the PDF file
    * @returns {Promise<string>} resolved with the extracted text
    */
-  extractTextFromPdf: (filePath) => PdfTextExtractor.extractText(filePath),
+  extractTextFromPdf: (filePath) => PdfTextExtractor.extractText(filePath.replace("file://", "")),
 };
